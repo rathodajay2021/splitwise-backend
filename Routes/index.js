@@ -5,5 +5,5 @@ module.exports = (app) => {
     res.status(STATUS_CODES.SUCCESS).send("working just fine");
   });
 
-  //   app.use(pathUrl.DEFAULT_URL, require("./usersRotes"));
+  app.use(pathUrl.DEFAULT_URL, require("./Auth"));
 };

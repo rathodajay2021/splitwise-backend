@@ -14,7 +14,14 @@ app.use(express.urlencoded({ extended: true }));
 const PORT = process.env.PORT || 3030;
 const URL =
   process.env.URL ||
-  "mongodb+srv://harshilpatel:reset123@harshilcluster.xcv6bpi.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://harshilpatel:reset123@harshilcluster.xcv6bpi.mongodb.net/splitwise?retryWrites=true&w=majority";
+
+/****************GLOBAL RESPONSE HANDLER SETUP****************/
+app.use((req, res, next) => {
+  const ResponseHandler = require("./Config/responseHandler");
+  res.handler = new ResponseHandler(req, res);
+  next();
+});
 
 /****************MULTI LANG SETUP****************/
 const language = require("i18n");
@@ -32,13 +39,6 @@ app.use(language.init); // MULTILINGUAL SETUP
 /****************ROUTES****************/
 const appRoutes = require("./Routes");
 appRoutes(app);
-
-/****************GLOBAL RESPONSE HANDLER SETUP****************/
-app.use((req, res, next) => {
-  const ResponseHandler = require("./Config/responseHandler");
-  res.handler = new ResponseHandler(req, res);
-  next();
-});
 
 /****************GLOBAL ERROR****************/
 app.use((err, req, res, next) => {

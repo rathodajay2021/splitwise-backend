@@ -1,1 +1,18 @@
-{}
+{
+	"STATUS": {
+		"VALIDATION_ERROR": "Validation error",
+		"SERVER_ERROR": "Something went wrong, please try again after a while",
+		"BAD_REQUEST": "Bad request",
+		"CREATED": "Created Successfully",
+		"SUCCESS": "STATUS.SUCCESS"
+	},
+	"VALIDATION": {
+		"EXIST": {
+			"EMAIL": "User with this email already exist, try another email"
+		},
+		"NOT_FOUND": {
+			"USER": "User with that mail is not found",
+			"PASSWORD": "Invalid password"
+		}
+	}
+}
