@@ -22,7 +22,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    verificationCode: { type: Number },
+    verificationCode: { type: Number, default: null },
     firstTimeLogin: {
       type: Number,
       default: 0,

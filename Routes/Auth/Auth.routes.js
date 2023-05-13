@@ -12,4 +12,20 @@ router
   .route("/signup")
   .post(validation.signupValidation, authentication.blank, controller.signUp);
 
+//otp
+router
+  .route("/reset-otp")
+  .post(
+    validation.resetOtpValidation,
+    authentication.blank,
+    controller.resendOtp
+  );
+router
+  .route("/verify-otp")
+  .post(
+    validation.verifyOtpValidation,
+    authentication.blank,
+    controller.verifyOtp
+  );
+
 module.exports = router;

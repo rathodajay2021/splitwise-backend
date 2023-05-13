@@ -35,7 +35,30 @@ const signupValidation = [
     .withMessage("Enter valid password"),
 ];
 
+const resetOtpValidation = [
+  body("email", "Email is required")
+    .trim()
+    .notEmpty()
+    .isEmail()
+    .withMessage("Enter valid email id"),
+];
+
+const verifyOtpValidation = [
+  body("email", "Email is required")
+    .trim()
+    .notEmpty()
+    .isEmail()
+    .withMessage("Enter valid email id"),
+  body("otp", "OTP is required")
+    .trim()
+    .notEmpty()
+    .isNumeric()
+    .withMessage("Enter valid otp format"),
+];
+
 module.exports = {
   loginValidation,
   signupValidation,
+  resetOtpValidation,
+  verifyOtpValidation,
 };
