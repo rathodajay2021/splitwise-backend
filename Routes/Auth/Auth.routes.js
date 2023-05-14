@@ -27,5 +27,19 @@ router
     authentication.blank,
     controller.verifyOtp
   );
+router
+  .route("/verify-email")
+  .post(
+    validation.resetOtpValidation,
+    authentication.blank,
+    controller.verifyEmail
+  );
+router
+  .route("/reset-password")
+  .post(
+    validation.loginValidation,
+    authentication.blank,
+    controller.resetPassword
+  );
 
 module.exports = router;

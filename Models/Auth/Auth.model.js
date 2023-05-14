@@ -10,8 +10,8 @@ class AuthModel {
     return await newUser.save();
   }
 
-  async updateOtpAPI(id, data) {
-    return await UserSchema.findOneAndUpdate({ id }, data);
+  async updateUserAPI(id, data) {
+    return await UserSchema.findByIdAndUpdate(id, data);
   }
 
   async verifyOtpAPI(email, verificationCode) {

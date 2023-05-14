@@ -18,9 +18,14 @@
   "USER": {
     "CREATED": "New User created successfully",
     "LOGIN": "User successfully login",
+    "PRE_CONDITION": "You need to verify your E-mail",
     "OTP": {
       "RESEND": "OTP is send on your mail id",
       "INVALID": "OTP is invalid"
+    },
+    "PASSWORD": {
+      "RESET_EMAIL": "Reset password url is send on your mail id",
+      "UPDATED": "Your password is changed successfully"
     }
   }
 }

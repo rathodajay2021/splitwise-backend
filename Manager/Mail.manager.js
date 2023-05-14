@@ -3,7 +3,6 @@ const otpGenerator = require("otp-generator");
 
 module.exports = class MailerManager {
   static async sendMail(emailId, subject, text, html) {
-    console.log(emailId, subject, text, html);
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
