@@ -26,6 +26,10 @@
     "PASSWORD": {
       "RESET_EMAIL": "Reset password url is send on your mail id",
       "UPDATED": "Your password is changed successfully"
+    },
+    "TOKEN": {
+      "INVALID": "Invalid access token",
+      "UNAUTHORIZED": "Access token wasn't there"
     }
   }
 }

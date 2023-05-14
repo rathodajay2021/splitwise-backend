@@ -73,3 +73,8 @@ exports.STATUS_CODES = {
   NOT_EXTENDED: 510,
   NETWORK_AUTHENTICATION_REQUIRED: 511,
 };
+
+exports.USER_TYPE = {
+  LOGGED_IN: "login_user",
+  OPEN_TO_ALL: "open_to_all",
+};

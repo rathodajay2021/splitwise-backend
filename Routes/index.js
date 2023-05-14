@@ -6,4 +6,5 @@ module.exports = (app) => {
   });
 
   app.use(pathUrl.DEFAULT_URL, require("./Auth"));
+  app.use(pathUrl.DEFAULT_URL, require("./Users"));
 };
